@@ -219,13 +219,13 @@ class QuickAdapterHelper private constructor(
             adapter.addOnViewAttachStateChangeListener(it)
         }
 
-        val isTure = if (trailingLoadStateAdapter == null) {
+        val isTrue = if (trailingLoadStateAdapter == null) {
             mAdapter.addAdapter(adapter)
         } else {
             mAdapter.addAdapter(mAdapter.adapters.size - 1, adapter)
         }
 
-        if (isTure) {
+        if (isTrue) {
             mAfterList += adapter
         }
     }

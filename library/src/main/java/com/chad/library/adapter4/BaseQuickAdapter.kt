@@ -658,7 +658,7 @@ abstract class BaseQuickAdapter<T : Any, VH : RecyclerView.ViewHolder>(
      * 改变某一位置数据
      */
     open operator fun set(@IntRange(from = 0) position: Int, data: T) {
-        set(position, data,null, null)
+        set(position, data, null, null)
     }
 
     open fun set(
