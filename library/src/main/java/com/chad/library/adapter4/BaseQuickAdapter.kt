@@ -634,8 +634,9 @@ abstract class BaseQuickAdapter<T : Any, VH : RecyclerView.ViewHolder>(
                 notifyItemRemoved(0)
                 notifyItemRangeInserted(0, newList.size)
             } else if (newDisplayEmptyLayout && !oldDisplayEmptyLayout) {
-                notifyItemRangeRemoved(0, _items.size)
+                val oldSize = _items.size
                 _items = newList
+                notifyItemRangeRemoved(0, oldSize)
                 notifyItemInserted(0)
             } else if (oldDisplayEmptyLayout && newDisplayEmptyLayout) {
                 _items = newList
